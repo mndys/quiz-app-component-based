@@ -3,7 +3,7 @@ import createElement from '../../lib/createElement'
 import homeSVG from '@fortawesome/fontawesome-free/svgs/solid/home.svg'
 import bookmarkSVG from '@fortawesome/fontawesome-free/svgs/solid/bookmark.svg'
 import createSVG from '@fortawesome/fontawesome-free/svgs/solid/plus-circle.svg'
-import settingsSVG from '@fortawesome/fontawesome-free/svgs/solid/sliders.svg'
+import settingsSVG from '@fortawesome/fontawesome-free/svgs/solid/sliders-h.svg'
 
 const buttonsConfig = [
   { svgPath: homeSVG, text: 'Home' },
