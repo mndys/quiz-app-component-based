@@ -27,6 +27,7 @@ export default function CreateForm(onSubmit) {
 
     onSubmit(question, answer)
     form.reset()
+    questionInput.focus()
   })
 
   return form
