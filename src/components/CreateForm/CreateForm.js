@@ -1,22 +1,33 @@
 import createElement from '../../lib/createElement'
-import './CreateForm.css'
 import Button from '../Button'
+import './CreateForm.css'
 
-export default function CreateForm() {
-  const form = createElement(
-    'form',
-    {
-      className: 'CreateForm',
-      innerHTML: `
-    <label>Question: 
-    <input type="text" placeholder="Write your question here"  />
+export default function CreateForm(onSubmit) {
+  const form = createElement('form', {
+    className: 'CreateForm',
+    innerHTML: `
+    <label>
+      Question:
+      <input name="question" placeholder="What is ...?" required>
     </label>
-    <label>Answer: 
-    <input type="text" placeholder="Write your answer here"  />
+    <label>
+      Answer:
+      <input name="answer" placeholder="It is ..." required>
     </label>
-    `,
-    },
-    Button('Create Card!')
-  )
+  `,
+  })
+
+  form.append(Button('Create!'))
+
+  form.addEventListener('submit', event => {
+    event.preventDefault()
+    const { question: questionInput, answer: answerInput } = form.elements
+    const question = questionInput.value
+    const answer = answerInput.value
+
+    onSubmit(question, answer)
+    form.reset()
+  })
+
   return form
 }
