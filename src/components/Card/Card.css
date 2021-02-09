@@ -1,8 +1,9 @@
-.Button {
-  padding: 10px 20px;
-  background: var(--color-primary);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px #0006;
+.Card {
+  padding: 20px;
+  background: #eee;
+  margin: 20px;
+}
+
+.Card h2 {
+  font-size: 1em;
 }
